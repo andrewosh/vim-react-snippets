@@ -45,13 +45,14 @@ snippet gis
 snippet ism
 	isMounted()
 snippet jsx
+	// @flow
 	/**
 	 * @jsx React.DOM
 	 */
 
-	var React = require('react');
+	import React, { Component } from 'react'
 
-	var ${1:ClassName} = React.createClass({
+	class ${1:ClassName} extends Component {
 
 		render: function() {
 			return (
@@ -59,7 +60,7 @@ snippet jsx
 			);
 		}
 
-	});
+	}
 
 	module.exports = $1;
 snippet pt
@@ -67,7 +68,7 @@ snippet pt
 		${1}: React.PropTypes.${2:string}
 	},
 snippet rcc
-	var ${1:ClassName} = React.createClass({
+	class ${1:ClassName} extends Component {
 
 		render: function() {
 			return (
@@ -75,7 +76,7 @@ snippet rcc
 			);
 		}
 
-	});
+	}
 snippet ren
 	render: function() {
 		return (
