@@ -73,23 +73,23 @@ isMounted()
 endsnippet
 
 snippet jsx "define jsx dom" b
+// @flow
 /**
  * @jsx React.DOM
  */
 
-var React = require('react');
-}
-var ${2:ClassName} = React.createClass({
+import React, { Component } from 'react'
 
-render: function() {
-	return (
-		${VISUAL}$4
-	);
-}
+export default class ${2:ClassName} extends Component {
 
-});
+	render: function() {
+		return (
+			${VISUAL}$4
+		);
+	}
+
+}
 $0
-${3:module.exports = $2;}
 endsnippet
 
 snippet pt "propTypes" b
@@ -99,15 +99,15 @@ propTypes: {
 endsnippet
 
 snippet rcc "create class/component" b
-var ${1:ClassName} = React.createClass({
+class ${1:ClassName} extends Component {
 
-render: function() {
-	return (
-		${VISUAL}$2
-	);
+	render: function() {
+		return (
+			${VISUAL}$2
+		);
+	}
+
 }
-
-});
 $0
 endsnippet
 
